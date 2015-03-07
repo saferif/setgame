@@ -1,0 +1,22 @@
+.card {
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	padding: 0 8px;
+	height: 135px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.card-container {
+	width: 93px;
+	display: inline-block;
+}
+.card img {
+	display: block;
+}
+.card.active {
+	background-color: #00e5ff;
+}
+.game_field {
+	max-width: 280px;
+}
