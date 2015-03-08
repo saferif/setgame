@@ -90,12 +90,10 @@ $(document).ready(function () {
 	function checkPossible() {
 		var cards = $('.card',$('.card-container'));
 		for (var i = 0; i < cards.length; i++) {
-			for (var j = 0; j < cards.length; j++) {
-				for (var k = 0; k < cards.length; k++) {
-					if (i != j && j != k && i != k) {
-						if (checkCards([cards[i], cards[j], cards[k]])) {
-							return true;
-						}
+			for (var j = i + 1; j < cards.length; j++) {
+				for (var k = j + 1; k < cards.length; k++) {
+					if (checkCards([cards[i], cards[j], cards[k]])) {
+						return true;
 					}
 				}
 			}
