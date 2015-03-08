@@ -75,13 +75,16 @@ $(document).ready(function () {
 	}
 
 	function addCards(deck, number) {
+		if (deck.cursor >= deck.cards.length) {
+			return false;
+		}
 		if (deck.cursor + number >= deck.cards.length) {
 			number = deck.cards.length - deck.cursor;
 		}
 		for (var i = 0; i < number; i++) {
 			$('.game_field').append(createCard(deck.cards[deck.cursor++]));
 		};
-		return deck.cursor >= deck.cards.length;
+		return true;
 	}
 
 	function checkPossible() {
