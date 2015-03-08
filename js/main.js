@@ -68,7 +68,9 @@ $(document).ready(function () {
 			activeCards.removeClass('active');
 			if (checkCards(activeCards)) {
 				activeCards.parent().remove();
-				addCards(deck, 3);
+				if ($('.card').length < 12) {
+					addCards(deck, 3);
+				}
 				checkGameOver();
 			}
 		}
