@@ -113,6 +113,7 @@ $(document).ready(function () {
     function checkGameOver() {
         if (!checkPossible()) {
             alert('Game over!');
+            newGame();
         };
     }
 
